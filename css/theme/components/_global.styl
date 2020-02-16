@@ -28,8 +28,8 @@ body
 .messages
     > li
         display: block
-        padding: 10px 20px
         margin-bottom: 20px
+        padding: 10px 20px
         font-size: 14px
 
     .success-msg
@@ -48,8 +48,11 @@ body
         color: #f7be07
 
 // Container
-.header, .main-container, .footer
+.header, .main-container
     @extend $container
 
 .categories .ul--0
     max-width: viewport
+
+.wrapper svg, .btn .ico, button .ico
+    fill: currentColor

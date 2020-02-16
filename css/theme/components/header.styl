@@ -1,4 +1,19 @@
 .header
+    margin-bottom: 0 !important
+    padding: 18px 0
+
+    > *
+        order: 1
+
     &-container
         position: sticky
         top: 0
+
+    @media (max-width: 992px)
+        flex-wrap: wrap
+
+        .scrolling &-container
+            background: #EFEFEF
+
+        .scrolling &
+            padding: 10px 0

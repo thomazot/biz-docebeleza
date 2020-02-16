@@ -3,20 +3,20 @@
  * Mixins
  */
 icon(i)
+    content: i
+    text-transform: none
+    font-weight: normal
+    font-style: normal
+    font-variant: normal
     font-family: 'biz_icons'
     speak: none
-    font-style: normal
-    font-weight: normal
-    font-variant: normal
-    text-transform: none
     -moz-osx-font-smoothing: grayscale
-    -webkit-font-smoothing: antialiased
-    content: i
+    -webkit-font-smoothing: antialiaseds
 
 /**
  * Mixin - Font-weight
  */
-font = 'Poppins', sans-serif
+font = 'Source Sans Pro', sans-serif
 light = 300
 regular = 400
 medium = 500
@@ -25,7 +25,7 @@ bold = 700
 /**
  * Mixin - Viewport
  */
-viewport = 980px
+viewport = 1200px
 gap = 32px
 /**
  * Mixin - Responsive
@@ -44,7 +44,13 @@ screen-md = 992px
 screen-lg = 1200px
 
 $container
-    width: viewport
-    max-width: 'calc(100% - %s)' % gap
-    margin-left: auto
     margin-right: auto
+    margin-left: auto
+    max-width: 'calc(100% - %s)' % gap
+    width: viewport
+
+white = #ffffff
+black = #000
+gray = #707070
+sub = 'data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QBARXhpZgAATU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAACKADAAQAAAABAAAACgAAAAD/7QA4UGhvdG9zaG9wIDMuMAA4QklNBAQAAAAAAAA4QklNBCUAAAAAABDUHYzZjwCyBOmACZjs+EJ+/8AAEQgACgAIAwERAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/bAEMAAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/bAEMBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAQEBAf/dAAQAAf/aAAwDAQACEQMRAD8A/qJ8DftR/Ev4A/C39jL4X6n+zn8Z4Lmx0D4V/Arx1omt+CtItr/Xdcs/Auj6E+pfDLWrTx/cHULnwzf6HqetahpGqeGRbaz4SGo6nc6x4U/sZ5boA//Q/vkudD0W91XS9evNH0u71zQ4NSttF1m50+0n1XR7bWVtF1e30vUZYnvNPg1VbCxXUorSaKO+WytBdLKLaHYAf//Z'
+next = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAcAAAALCAYAAACzkJeoAAAAAXNSR0IArs4c6QAAADhlWElmTU0AKgAAAAgAAYdpAAQAAAABAAAAGgAAAAAAAqACAAQAAAABAAAAB6ADAAQAAAABAAAACwAAAAA3bhBtAAAATklEQVQYGWNgYGBYAMTngVgAiDHABaDIfyDGqgCkg8YKCqD2fwDSCkAMBwlAFshhIAkDIIaDBCCLNAmQ1gdAjGEUSAIEFIAYxQ6QIAgAAKSiGLQs2P4/AAAAAElFTkSuQmCC'

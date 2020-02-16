@@ -1,0 +1,102 @@
+/* Autocomplete */
+form.searchautocomplete
+    position: relative
+
+.searchautocomplete-loader
+    position: absolute
+    top: calc(50% - 20px)
+    right: 110px
+
+.searchautocomplete-placeholder
+    position: absolute
+    top: calc(100% + 5px)
+    right: 0
+    left: 0
+    padding: 10px 0 10px 10px
+    border: 1px solid #ccc
+    background: #fff
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .2)
+
+.searchautocomplete-placeholder:before, .searchautocomplete-placeholder:after
+    position: absolute
+    bottom: 100%
+    left: calc(50% - 10px)
+    display: block
+    border: 10px solid transparent
+    border-bottom-color: #ccc
+    content: ''
+
+.searchautocomplete-placeholder:after
+    margin-bottom: -1px
+    border-bottom-color: #fff
+
+.searchautocomplete-placeholder ul
+    overflow: auto
+    margin-right: 5px
+    padding-right: 5px
+    max-height: 200px
+
+.searchautocomplete-placeholder ul::-webkit-scrollbar
+    width: 3px
+
+.searchautocomplete-placeholder ul::-webkit-scrollbar-track
+    border-radius: 3px
+    background-color: transparent
+    background-image: linear-gradient(90deg, transparent 50%, rgba(0, 173, 239, .3) 50%)
+    background-size: 2px 1px
+
+.searchautocomplete-placeholder ul::-webkit-scrollbar-thumb
+    border-radius: 3px
+    background: rgba(0, 173, 239, .7)
+
+.searchautocomplete-placeholder ul li
+    display: flex
+    align-items: center
+    margin-bottom: 10px
+    padding: 10px
+    border: 1px solid #ddd
+
+.searchautocomplete-placeholder .all
+    margin-left: -10px
+    padding: 10px 10px 0 0
+    border-top: 1px solid #ccc
+    text-align: right
+
+.searchautocomplete-placeholder .all a
+    display: inline-block
+    padding: 0 20px
+    border-radius: 3px
+    background: color2_bg
+    color: color2_font
+    font-size: 12px
+    line-height: 30px
+
+.searchautocomplete-placeholder .all a:hover
+    background: color2_bg_hover
+    color: color2_font_hover
+
+.searchautocomlete-image
+    flex: 0 0 auto
+    margin-right: 10px
+
+.searchautocomlete-info
+    flex: 1 1 auto
+    color: #666
+    font-size: 12px
+
+.searchautocomlete-info > *
+    margin-bottom: 7px
+
+.searchautocomlete-info > *:last-child
+    margin-bottom: 0
+
+.searchautocomlete-info .name
+    display: block
+    color: #222
+    font-weight: 600
+
+.searchautocomlete-info .name:hover
+    color: color1_bg_hover
+
+.searchautocomlete-info .name, .searchautocomlete-info .regular-price, .searchautocomlete-info .special-price
+    font-size: 14px

@@ -1,0 +1,41 @@
+.head
+    margin-bottom: 0 !important
+    background: #EFEFEF
+
+    .ico
+        margin-right: 3px
+        width: 16px
+        height: 16px
+        color: color2_bg
+
+    a, span
+        color: #707070
+        font-weight: regular
+        font-size: 12px
+
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        min-height: 30px
+
+        @extend $container
+
+    &__alert
+        display: flex
+        aling-items: center
+
+    &__contact
+        display: flex
+        align-items: center
+
+        > div + div
+            margin-left: 16px
+
+    &__phone, &__timer
+        > a, > span
+            display: flex
+            align-items: center
+
+    @media (max-width: 992px)
+        display: none

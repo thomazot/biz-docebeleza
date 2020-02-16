@@ -1,0 +1,80 @@
+.footer
+    font-weight: regular
+    font-size: 16px
+
+    &__container
+        @extend $container
+
+        padding: 0 0 50px
+
+    &__box
+        padding-top: 30px
+
+        &--about
+            font-weight: regular
+            font-size: 14px
+
+    &__title
+        margin-bottom: 15px
+        color: #15B0DE
+        text-transform: uppercase
+        font-weight: light
+        font-size: 23px
+
+    &__row
+        &--payments
+            margin-bottom: 0 !important
+            background: #E0E0E0
+
+        &--utils
+            background: color1_bg
+            color: #ccc
+
+    &__whatsapp
+        span
+            font-size: 16px
+
+        strong
+            display: block
+            color: #3DD010
+            font-weight: regular
+            font-size: 24px
+
+    &__email
+        a
+            color: #50D6FD
+            text-decoration: underline
+            font-weight: regular
+            font-size: 16px
+
+    &__copyright
+        padding: 10px 0 50px
+        color: color1_bg
+        text-align: center
+        font-weight: regular
+        font-size: 12px
+
+    @media (min-width: 993px)
+        &__container
+            display: flex
+            justify-content: space-between
+
+        &__box
+            &--about
+                .footer__content
+                    max-width: 335px
+
+    @media (max-width: 992px)
+        &__row
+            &--payments
+                text-align: center
+
+                .flex--a-center
+                    justify-content: center
+
+                .footer__container
+                    display: flex
+                    flex-flow: column nowrap
+
+                .footer__box:last-child
+                    order: -1

@@ -1,0 +1,159 @@
+/* Lista de Desejos */
+.mywish
+    position: relative
+    z-index: 20
+    height: 2.75rem
+
+.mywish__header a
+    position: relative
+    display: flex
+    justify-content: center
+    align-items: center
+    width: 2.75rem
+    height: 2.75rem
+    border-radius: 100%
+    box-shadow: inset 0 0 0 1px color1_bg
+
+.mywish__header .ico
+    max-height: none
+    width: 1.2rem
+    height: 1rem
+    fill: none
+    stroke: color1_bg
+
+.mywish__header .text
+    display: none
+
+.mywish__header .qtd
+    position: absolute
+    top: 0
+    right: -.25rem
+    width: 1rem
+    height: 1rem
+    border-radius: 100%
+    background: color1_bg_hover
+    color: color1_font_hover
+    text-align: center
+    text-indent: -1.5px
+    letter-spacing: -.1em
+    font-size: .7rem
+    line-height: 1rem
+
+.mywish__content
+    position: absolute
+    top: 100%
+    left: 0
+    display: none
+    padding: 1rem
+    max-width: 90vw
+    width: 320px
+    background: #fff
+    box-shadow: inset 0 1px 0 color1_bg, inset 0 0 0 1px rgba(0, 0, 0, .1), 0 1rem 2rem - 1rem rgba(0, 0, 0, .5)
+
+.drop--left .mywish__content
+    right: auto
+    left: 0
+
+.drop--right .mywish__content
+    right: 0
+    left: auto
+
+.drop--top .mywish__content
+    top: 100%
+    bottom: auto
+
+.drop--bottom .mywish__content
+    top: auto
+    bottom: 100%
+    box-shadow: inset 0 -1px 0 color1_bg, inset 0 0 0 1px rgba(0, 0, 0, .1), 0 1rem 2rem - 1rem rgba(0, 0, 0, .5)
+
+.mywish:hover .mywish__content
+    display: block
+
+.mywish:hover .mywish__header a
+    background: color1_bg
+
+.mywish:hover .mywish__header .ico
+    fill: color1_font !important
+
+.mywish__list
+    overflow: auto
+    margin-right: -.5rem
+    padding-right: .5rem
+    max-height: 50vh
+
+.mywish__list::-webkit-scrollbar
+    width: 1px
+
+.mywish__list::-webkit-scrollbar-track
+    background: rgba(0, 0, 0, .1)
+
+.mywish__list::-webkit-scrollbar-thumb
+    background: color1_bg
+
+.mywish__item
+    position: relative
+    display: flex
+    align-items: center
+
+.mywish__item:not(:last-child)
+    margin-bottom: .5rem
+    padding-bottom: .5rem
+    border-bottom: 1px solid rgba(0, 0, 0, .2)
+
+.mywish__thumb
+    flex: 0 0 auto
+    margin-right: 1rem
+
+.mywish__details
+    flex: 1 1 auto
+
+.mywish__name
+    display: block
+    margin-bottom: 1rem
+
+.mywish__remove
+    position: absolute
+    top: 0
+    left: 0
+    padding: .25rem
+    height: 1.5rem
+    background: #fff
+    box-shadow: none
+    line-height: 1rem
+
+.mywish__actions
+    margin: 1rem -1rem -1rem
+    border-top: 1px solid rgba(0, 0, 0, .1)
+
+.mywish__actions a
+    display: block
+    padding: 1rem
+
+.mywish__actions a:hover
+    background: color1_bg
+    color: color1_font
+
+.mywish--items .mywish__header .ico
+    fill: color1_bg
+
+.header .mywish
+    margin-left: 1rem
+
+/* ------ Lista de Desejos */
+/* ~992px */
+@media (max-width: 62rem)
+    .mywish__content
+        display: none !important
+
+    .mywish__header .ico
+        fill: color1_bg !important
+
+    .header-container .mywish__header a
+        background: color1_font !important
+        box-shadow: none
+
+/* ~768px */
+@media (max-width: 48rem)
+    .mywish
+        display: none
