@@ -1,2 +1,58 @@
 .cms-home .header-container + .banner
-    margin: 0
+    margin-top: -16px
+
+    img
+        min-width: 100%
+        object-fit: cover
+
+#banner__banner-regua
+    margin-top: -16px
+    border-bottom: solid 1px #EFEFEF
+
+    .banner__wrapper
+        @extend $container
+
+        width: viewport !important
+
+.banner
+    &__wrapper
+        .banner--nojs &
+            display: flex
+            flex-flow: row wrap
+            margin: -10px
+
+            img
+                min-width: 100%
+                object-fit: cover
+
+    &__item
+        .banner--nojs &
+            padding: 10px
+
+#banner__home-banner-mosaico
+    margin-top: 30px
+
+#banner__home-banner-vitrine-main-1, #banner__home-banner-vitrine-main-2
+    img
+        top: 50%
+        width: 100%
+        object-fit: cover
+        object-position: top center
+
+    @media (min-width: 993px)
+        a
+            background-attachment: fixed
+            background-position: center center
+
+        img
+            visibility: hidden
+
+@media (min-width: 993px)
+    .banner--nojs
+        .banner
+            &__item
+                flex: 0 1 33.333%
+                width: auto
+
+                &:nth-last-child(1), &:nth-last-child(2)
+                    flex: 0 1 50%

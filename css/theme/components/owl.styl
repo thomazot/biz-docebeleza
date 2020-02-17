@@ -1,0 +1,42 @@
+.owl
+    &-prev
+        right: auto
+
+    &-next
+        left: auto
+
+    &-prev, &-next
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+        width: 33px
+        height: 33px
+        border-radius: 50%
+        background: #fff
+        box-shadow: none
+        box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+        color: #6C6C6C
+        text-indent: 0
+
+        &:hover
+            background: #ffffff
+            color: color1_bg
+
+        .ico
+            width: 10px
+            height: 10px
+
+        &:before
+            display: none
+
+@media (min-width: viewport + 220)
+    .owl
+        .products &-next
+            right: -40px
+
+        .products &-prev
+            left: -40px
+
+        .products &-pagination
+            display: none

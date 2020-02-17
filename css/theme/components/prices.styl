@@ -1,0 +1,24 @@
+.price-box
+    .old-price
+        display: none
+
+    .regular-price, .special-price
+        .label
+            display: none
+
+        .price span
+            font-weight: regular
+            font-size: 22px
+
+.price-box-parcelado
+    .preco-parcelado-sem-juros
+        .upto, .s-juros
+            display: none
+
+        &, .num span, .value span, .de span
+            color: #707070
+            font-weight: regular
+            font-size: 14px
+
+        + .preco-parcelado
+            display: none

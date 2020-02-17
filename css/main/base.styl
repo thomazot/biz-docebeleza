@@ -532,10 +532,10 @@ svg.img-twitter
 
 .products__item
     display: flex
-    flex: 1 1 250px
+    flex: 1 1 210px
     margin: 0
-    padding: 0 .5rem 1rem
-    min-width: 250px
+    padding: 0 15px 30px
+    min-width: 0
 
 .products__list .flex-fix
     order: 99
@@ -2224,16 +2224,14 @@ body.ie .owl-prev:before, body.ie .owl-next:before
 .banner--nojs img.m_img
     display: none
 
-.banner--nojs .banner__wrapper
-    column-gap: 0
-    column-count: 3
-
-.banner--nojs .banner__item
-    display: block
-    overflow: hidden
-    break-inside: avoid-column
-    page-break-inside: avoid
-
+// .banner--nojs .banner__wrapper
+// column-gap: 0
+// column-count: 3
+// .banner--nojs .banner__item
+// display: block
+// overflow: hidden
+// break-inside: avoid-column
+// page-break-inside: avoid
 .banner:not(.banner--nojs) img.d_img
     position: absolute
     top: 50%
@@ -2453,9 +2451,6 @@ body.ie .owl-prev:before, body.ie .owl-next:before
     background: #fff
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1)
     transition: all 200ms ease-out
-
-.filters__filter:not(:last-child)
-    margin-bottom: 1rem
 
 .filters__filter:hover
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .1), 0 1rem 1.5rem -1rem rgba(0, 0, 0, .4)
@@ -8944,17 +8939,11 @@ table .change-product-link:hover
     .banner .owl-controls
         display: none !important
 
-    .banner--nojs .banner__wrapper
-        column-count: 2
-
 /* ~568px */
 @media (max-width: 35.5rem)
     .slide__youtube
         padding: 100% 182% 0 0
         height: auto !important
-
-    .banner--nojs .banner__wrapper
-        column-count: 1
 
 /* ------ Modal */
 /* ~992px */
@@ -9019,11 +9008,6 @@ table .change-product-link:hover
         right: 0
         left: auto
 
-/* ~992px */
-@media (max-width: 62rem)
-    .owl-buttons
-        display: none
-
 /* ------ Feed RSS */
 /* ~992px */
 @media (max-width: 62rem)
@@ -9066,10 +9050,10 @@ table .change-product-link:hover
         z-index: 10
         margin-left: 0
 
-    .header .myaccount__header, .header .mycart__header
+    .header .myaccount__header
         padding: .375rem
 
-    .header .myaccount__header a, .header .mycart__header a
+    .header .myaccount__header a
         width: 2rem
         height: 2rem
 

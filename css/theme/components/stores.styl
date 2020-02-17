@@ -1,0 +1,51 @@
+.stores
+    &__header
+        display: flex
+        justify-content: space-between
+        align-items: center
+        padding: 20px 0
+
+    &__title
+        color: #00A3D3
+        font-weight: regular
+        font-size: 18px
+
+    &__more
+        color: #00A3D3
+        text-decoration: underline
+        font-weight: semibold
+        font-size: 12px
+
+    &__list
+        display: flex
+        justify-content: space-between
+
+        a
+            display: inline-block
+            overflow: hidden
+            border-radius: 10px
+
+    .owl-item
+        padding: 10px
+
+        .stores__item
+            margin: 0 auto
+
+    .owl-wrapper-outer
+        margin: -10px
+        width: auto
+
+    .owl-controls, .owl-buttons
+        display: block
+
+    @media (min-width: 768px)
+        .owl-wrapper
+            display: flex
+            justify-content: space-between
+            max-width: 100%
+
+            &:after
+                display: none
+
+        .owl-item
+            width: auto !important

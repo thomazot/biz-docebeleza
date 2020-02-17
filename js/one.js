@@ -900,7 +900,7 @@ function default_carrossel_produtos() {
                     navigationText: ['?', '?'],
                     items: 5,
                     itemsCustom: [
-                        [0, 1],
+                        [0, 2],
                         [568, 2],
                         [768, 3],
                         [1024, 4],
@@ -1356,7 +1356,11 @@ $j.fn.neonTheme.custom = {
             mode: 'html',
         },
         'z-next': {
-            selector: '.mycart__actions .editar',
+            selector: '.mycart__actions .editar, .owl-next',
+            mode: 'html',
+        },
+        'z-prev': {
+            selector: '.owl-prev',
             mode: 'html',
         },
     },
@@ -1431,12 +1435,19 @@ function scrollTop() {
     var currentScrolling = 0
     var heightHeader = $j('.header-container').outerHeight()
 
+    if ($j(window).width() > 992) $j('.header-container').height(heightHeader)
+
     $j(window).scroll(function() {
         var body = $j('body')
         var scrollTop = $j(window).scrollTop()
 
-        if (scrollTop > 0) body.addClass('scrolling')
-        else body.removeClass('scrolling')
+        if ($j(window).width() > 992) {
+            if (scrollTop > heightHeader) body.addClass('scrolling')
+            else body.removeClass('scrolling')
+        } else {
+            if (scrollTop > 0) body.addClass('scrolling')
+            else body.removeClass('scrolling')
+        }
 
         if (scrollTop > heightHeader) {
             if (scrollTop > currentScrolling) {
@@ -1471,6 +1482,91 @@ $j(document)
         }
 
         mycart($)
+
+        var productsCarousel = $('.products-carousel__list')
+
+        if (productsCarousel.length)
+            $(productsCarousel).owlCarousel({
+                itemsScaleUp: true,
+                navigation: true,
+                pagination: false,
+                items: 12,
+                itemsCustom: [
+                    [0, 4],
+                    [568, 5],
+                    [768, 8],
+                    [993, 12],
+                ],
+            })
+
+        var stores = $('.stores__list')
+
+        if (stores.length)
+            $(stores).owlCarousel({
+                itemsScaleUp: true,
+                navigation: true,
+                pagination: false,
+                items: 5,
+                itemsCustom: [
+                    [0, 2],
+                    [568, 4],
+                    [768, 5],
+                ],
+            })
+        $(
+            '#banner__home-banner-vitrine-main-1, #banner__home-banner-vitrine-main-2'
+        ).each(function() {
+            $('img', this).each(function() {
+                var src = $(this).attr('src')
+                $(this)
+                    .closest('a')
+                    .css({
+                        'background-image': 'url("' + src + '")',
+                    })
+            })
+        })
+        var history = $('.wrapper > .products .products__list')
+        if (history)
+            $(history).owlCarousel({
+                navigation: true,
+                pagination: false,
+                navigationText: ['?', '?'],
+                items: 8,
+                itemsCustom: [
+                    [0, 2],
+                    [568, 2],
+                    [768, 3],
+                ],
+                beforeMove: function() {
+                    if (typeof $j.fn.lazyload != 'undefined') {
+                        $j(el)
+                            .find('img')
+                            .lazyload()
+                    }
+                },
+            })
+
+        var promote = $('.promote__list')
+        if (promote)
+            $(promote).owlCarousel({
+                navigation: true,
+                pagination: false,
+                navigationText: ['?', '?'],
+                items: 5,
+                itemsCustom: [
+                    [0, 1],
+                    [568, 2],
+                    [768, 3],
+                    [993, 5],
+                ],
+                beforeMove: function() {
+                    if (typeof $j.fn.lazyload != 'undefined') {
+                        $j(el)
+                            .find('img')
+                            .lazyload()
+                    }
+                },
+            })
     })
     .on('resizeStop', function(e) {
         // Safe window.resize

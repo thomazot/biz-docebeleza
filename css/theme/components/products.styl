@@ -1,2 +1,102 @@
 .products
-    display: none
+    .cms-home &
+        margin: 50px 0
+
+    &__title
+        display: flex
+        justify-content: space-between
+        color: #00A3D3
+        font-weight: regular
+        font-size: 18px
+
+        a
+            color: #00A3D3
+            text-decoration: underline
+            font-weight: semibold
+            font-size: 12px
+
+    &__case
+        display: block
+        padding: 15px
+        box-shadow: inset 0 0 0 1px #EFEFEF
+
+    &__header
+        margin-bottom: 15px
+
+        img
+            height: 180px
+            object-fit: contain
+
+    &__name
+        display: block
+        overflow: hidden
+        margin-bottom: 8px
+        height: 42px
+        font-weight: regular
+        font-size: 14px
+        line-height: 20px
+
+    &__labels
+        .prolabel
+            position: static
+            display: inline-block
+
+    .product-rate
+        margin-bottom: 10px
+
+        .rating-box:before, .rating:before
+            font-size: 20px
+
+    .product-rate
+        .rating:before
+            color: #F9C001
+
+    .wrapper > &
+        margin-bottom: 0 !important
+        padding: 45px 0
+        background: #EFEFEF
+
+        header
+            @extend $container
+
+        .products
+            &__title
+                color: #00A3D3
+                font-weight: regular
+                font-size: 18px
+
+                &:before
+                    content: 'Seu Histórico'
+
+                span
+                    display: none
+
+            &__item
+                padding: 0
+                min-width: 0
+                max-width: 140px
+
+            &__main
+                display: none
+
+            &__header
+                margin-bottom: 0
+
+                a
+                    display: block
+
+                img
+                    width: 140px
+                    height: 140px
+                    object-fit: contain
+
+            &__list
+                @extend $container
+
+            &__case
+                padding: 0
+                background: #fff
+                box-shadow: none
+
+    .owl-pagination
+        display: none
