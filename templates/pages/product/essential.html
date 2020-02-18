@@ -1,0 +1,60 @@
+<div class="prod__img">
+    @fotos
+    @selos
+</div>
+
+<div class="prod__shop">
+    <div class="col">
+        <div class="prod__head">
+            <div class="brands">@marca</div>
+            <div class="sku">#@atributo(sku)</div>
+        </div>
+
+        <div class="prod__name">
+            <h1>@nome</h1>
+        </div>
+        <div class="prod__short-description">
+            @descricao(curta)
+        </div>
+        <div class="prod__short-review">
+            @avaliacoes
+        </div>
+
+        @variacoes
+        @bt(sobconsulta "Sob Consulta")
+        
+        @if(is_disponivel)
+        <div class="prod__prices-buys">
+            <div class="prod__prices">
+                @preco
+                <div class="prod__payment">
+                    @preco(parcelado)
+                </div>
+                
+                <div class="prod__freeshipping">
+                    <svg class="ico z-truck"><use xlink:href="#z-truck" /></svg>
+                    <div>
+                        <span class="label">Previsão de Entrega: <strong>27/12 (3 dias úteis)</strong></span>
+                        <span class="value">Valor: <strong>Grátis</strong> | <a href="#">simular frete</a></span>
+                    </div>
+                </div>    
+    
+                <div class="prod__gift">
+                    @brinde(Compre e Ganhe!)
+                </div>
+            </div>
+            <div class="prod__buys">
+                @bt(comprar)
+            </div>
+        </div>
+        @else(is_disponivel)
+        <div class="prod__out">
+            <div class="title title--sm">Produto Esgotado</div>
+            @alertas
+        </div>
+        @endif(is_disponivel)
+    </div>
+</div>
+<div id="payments">@parcelamento</div>
+<div id="shipping">@simulador-frete</div>
+<script>modal('payments');modal('shipping')</script>

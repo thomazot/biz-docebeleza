@@ -1,0 +1,32 @@
+.product-collateral
+    .carousel
+        .title
+            color: #00A3D3
+            font-weight: regular
+            font-size: 18px
+
+.collateral
+    &__title
+        margin-bottom: 20px
+        color: #00A3D3
+        font-weight: regular
+        font-size: 18px
+
+    &__content
+        &, .std
+            font-size: 14px
+
+        + .collateral__title
+            padding-top: 20px
+
+    @media (min-width: 993px)
+        &__block
+            display: flex
+            align-items: stretch
+            margin: 20px -20px
+
+        &__box
+            padding: 0 20px
+
+            &:first-child
+                box-shadow: 1px 0 0 #ccc

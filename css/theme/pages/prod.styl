@@ -1,0 +1,211 @@
+.catalog-product-view
+    .col-main
+        padding: 0
+
+.prod
+    &__head
+        display: flex
+        align-items: center
+
+        .brands
+            .brand
+                display: flex
+                align-items: center
+                padding: 0
+
+                a
+                    color: #707070
+                    font-weight: regular
+                    font-size: 14px
+                    opacity: 1
+
+                    img
+                        display: none
+
+                    &:before
+                        content: attr(title)
+
+                &:after
+                    display: inline-block
+                    margin: 0 5px
+                    width: 5px
+                    height: 5px
+                    border-radius: 50%
+                    background: #707070
+                    content: ''
+
+        .sku
+            color: #707070
+            font-weight: regular
+            font-size: 14px
+
+    &__name
+        h1
+            font-weight: regular
+            font-size: 24px
+
+    &__short-description
+        padding: 10px 0
+        color: #707070
+        font-weight: regular
+        font-size: 12px
+
+    &__shop
+        .product-rate
+            .rating-box
+                &:before, .rating:before
+                    font-size: 15px
+
+        .product-rate .to-rate
+            color: #707070
+            font-weight: regular
+            font-size: 12px
+
+        .price-box-parcelado
+            display: flex
+            align-items: center
+            font-weight: regular
+            font-size: 14px
+
+            .ico
+                margin-right: 10px
+                width: 16px
+                height: 11px
+                color: color2_bg
+
+            .preco-parcelado-sem-juros
+                margin: 0
+
+                .de span
+                    color: #242424
+                    font-weight: regular
+                    font-size: 14px
+
+                .num span, .value span
+                    color: #242424
+                    font-weight: bold
+                    font-size: 14px
+
+            > span
+                margin-left: 3px
+                color: #242424
+                line-height: 1
+
+                a
+                    padding-left: 3px
+                    color: #242424
+                    text-decoration: underline
+
+        .qty-wrapper
+            display: none
+
+        .add-to-cart-btn
+            display: flex
+            justify-content: center
+            align-items: center
+            padding: 0
+            height: 50px
+            border-radius: 50px
+            background: #3DD010
+            box-shadow: none
+            text-transform: uppercase
+            font-weight: semibold
+            font-size: 14px
+            line-height: 1
+
+            span
+                display: none
+
+            &:before
+                margin-right: 5px
+                content: url(cart)
+
+            &:after
+                content: 'Adicionar no carrinho'
+
+    &__freeshipping
+        display: flex
+        justify-content: flex-start
+        align-items: flex-start
+        color: #268800
+        font-weight: regular
+        font-size: 14px
+
+        .ico
+            margin-top: 5px
+            margin-right: 10px
+            width: 16px
+            height: 11px
+            color: color2_bg
+
+        .value
+            display: block
+
+            a
+                color: #242424
+                text-decoration: underline
+                font-weight: regular
+                font-size: 14px
+
+    &__buys
+        flex: 0 1 225px
+
+    @media (min-width: 993px)
+        &__prices-buys
+            display: flex
+
+        &__buys
+            padding-left: 10px
+
+        &__img
+            flex: 1
+            min-width: 0
+
+        &__shop
+            flex: 0 1 500px
+
+    @media (max-width: 992px)
+        &__buys
+            padding-top: 20px
+
+.product-essential
+    #payments, #shipping
+        display: none
+
+.product-collateral
+    .reviews
+        display: none
+
+// Images
+.product-image-thumbs
+    .thumb-link
+        border: solid 1px #EFEFEF
+        border-radius: 0
+        box-shadow: none
+
+        &:hover, &.on
+            border: solid 1px #EFEFEF
+            box-shadow: none
+
+@media (min-width: 993px)
+    .product-image-thumbs
+        li + li
+            margin-top: 15px
+
+    .product-image-container
+        display: flex
+
+    .product-image
+        flex: 1
+        min-width: 0
+
+    .more-views
+        flex: 0 1 120px
+        order: -1
+        padding-right: 20px
+
+        ul
+            display: block
+
+    .product-image-gallery
+        box-shadow: none

@@ -1347,12 +1347,17 @@ $j.fn.neonTheme.custom = {
             mode: 'prepend',
             ratio: false,
         },
+        'z-card': {
+            selector: '.prod__payment .price-box-parcelado',
+            mode: 'prepend',
+        },
         'z-menu': {
             selector: '.categories__show',
             mode: 'html',
         },
         'z-close': {
-            selector: '.categories__hide',
+            selector:
+                '.categories__hide, .filters__filtered .btn--close, .modal__close',
             mode: 'html',
         },
         'z-next': {
@@ -1533,9 +1538,9 @@ $j(document)
                 navigationText: ['?', '?'],
                 items: 8,
                 itemsCustom: [
-                    [0, 2],
-                    [568, 2],
-                    [768, 3],
+                    [0, 4],
+                    [568, 6],
+                    [992, 8],
                 ],
                 beforeMove: function() {
                     if (typeof $j.fn.lazyload != 'undefined') {
@@ -1567,6 +1572,45 @@ $j(document)
                     }
                 },
             })
+        $('.product-collateral .carousel .products__list').each(function() {
+            var el = $(this)
+            $(el).owlCarousel({
+                navigation: true,
+                navigationText: ['?', '?'],
+                items: 5,
+                itemsCustom: [
+                    [0, 2],
+                    [568, 2],
+                    [768, 3],
+                    [1024, 4],
+                    [1270, 5],
+                ],
+                beforeMove: function() {
+                    if (typeof $j.fn.lazyload != 'undefined') {
+                        $j(el)
+                            .find('img')
+                            .lazyload()
+                    }
+                },
+            })
+        })
+
+        var payments = $('.prod__payment .price-box-parcelado')
+        if (payments.length) {
+            var linkPayment = $(
+                '<span>|<a class="payment-button" href="#">ver parcelamento</a></span>'
+            )
+            payments.append(linkPayment)
+            linkPayment.find('a').click(function(event) {
+                event.preventDefault()
+                modal_open('payments')
+            })
+        }
+
+        // Modals
+        $('.prod__freeshipping .value a').click(function() {
+            modal_open('shipping')
+        })
     })
     .on('resizeStop', function(e) {
         // Safe window.resize
