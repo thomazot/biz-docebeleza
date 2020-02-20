@@ -1,0 +1,83 @@
+.myaccount
+    &__header
+        a
+            display: flex
+            color: gray
+            text-decoration: underline
+            font-weight: regular
+            font-size: 12px
+            line-height: 1.2
+
+            .ico
+                margin-right: 5px
+                width: 24px
+                height: 24px
+                color: color2_bg
+
+    &:hover .myaccount__header a
+        background: none
+
+    &__login
+        &-btn
+            max-width: 100%
+            width: 255px
+            height: 45px
+            border-radius: 45px
+            text-transform: uppercase
+            font-weight: 16px
+            font-weight: regular
+
+        .form-list
+            .fields
+                display: block
+
+        .input-box
+            text-align: center
+
+        input
+            margin: 0 auto
+            max-width: 100%
+            width: 255px
+            border-radius: 0
+            background: #E0E0E0
+            box-shadow: none
+
+    &__forgot
+        position: static
+        display: block
+        font-size: 12px
+
+    &__register
+        text-align: center
+
+        .std
+            margin: 0 auto 20px
+            max-width: 100%
+            width: 255px
+            color: #707070
+            font-size: 16px
+
+        &-btn
+            margin: 0 auto
+            max-width: 100%
+            width: 255px
+            height: 45px
+            border-radius: 45px
+            background: color2_bg
+            color: #fff
+            text-transform: uppercase
+            font-weight: regular
+            font-size: 18px
+
+#myaccount-modal
+    .modal__content
+        padding-top: 30px
+        padding-bottom: 30px
+        max-width: 100%
+        width: 800px
+
+        > .title
+            color: #15B0DE
+            text-align: center
+            font-weight: regular
+            font-size: 16px

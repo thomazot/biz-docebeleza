@@ -1,0 +1,38 @@
+.freeproduct
+    margin: 20px 0
+
+    &-item
+        display: block
+        border: dotted 1px #CCCCCC
+
+        a
+            display: flex
+            color: #707070
+            font-weight: regular
+            font-size: 12px
+            aling-items: center
+
+        img
+            margin: 10px
+            max-width: 40px
+            border: solid 1px #EFEFEF
+
+        .name
+            display: flex
+            flex-flow: column nowrap
+            justify-content: center
+
+            &:before
+                display: block
+                padding-left: 16px
+                height: 14px
+                background: url(gift) no-repeat left center
+                background-size: 13px 14px
+                color: #242424
+                content: 'Brinde'
+                text-transform: uppercase
+                font-size: regular
+                font-size: 12px
+
+    .title
+        display: none

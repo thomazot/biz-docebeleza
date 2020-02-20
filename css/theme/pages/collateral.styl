@@ -19,6 +19,28 @@
         + .collateral__title
             padding-top: 20px
 
+    &__box:last-child
+        div:nth-child(2)
+            h2
+                display: none
+
+            table
+                tbody
+                    td, th
+                        padding: 5px 0
+                        border: 0
+                        font-size: 14px
+
+                    tr
+                        display: block
+
+                    td
+                        padding-left: 6px
+
+                    th
+                        &:after
+                            content: ':'
+
     @media (min-width: 993px)
         &__block
             display: flex

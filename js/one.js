@@ -1330,7 +1330,7 @@ $j.fn.neonTheme.custom = {
     m_categories: true, // ativa o responsivo do Menu de Categorias
     m_search: false, // ativa o responsivo da Busca
     m_filters: true, // ativa o responsivo dos Filtros do Catálogo
-    m_myaccount: true, // ativa o responsivo da Minha Conta
+    m_myaccount: false, // ativa o responsivo da Minha Conta
     m_mycart: false, // ativa o responsivo do Meu Carrinho
     m_parcelamento: true, // ativa o responsivo do parcelamento na página de produto
     m_frete: true, // ativa o responsivo do cálculo de frete na página do produto
@@ -1610,6 +1610,27 @@ $j(document)
         // Modals
         $('.prod__freeshipping .value a').click(function() {
             modal_open('shipping')
+        })
+
+        // Modal myaccount
+        var myaccount = $('.header .myaccount__content')
+        if (myaccount.length) {
+            myaccount.attr('id', 'myaccount-modal')
+            modal('myaccount-modal')
+
+            $('.header .myaccount__header a').click(function(event) {
+                event.preventDefault()
+                modal_open('myaccount-modal')
+            })
+        }
+
+        $('.category-custom__actions a').click(function() {
+            $('html,body').animate(
+                {
+                    scrollTop: $('.category-description').offset().top,
+                },
+                1000
+            )
         })
     })
     .on('resizeStop', function(e) {

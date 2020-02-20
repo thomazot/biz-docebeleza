@@ -1,0 +1,86 @@
+.quick-view-img
+    .thumb-images
+        display: none
+
+.quickview-close
+    top: 10px
+    right: 10px
+    bottom: auto
+
+    .ico
+        width: 13px
+        height: 13px
+        stroke: color1_bg
+
+.quick-view-shop
+    .product-name h2
+        font-weight: regular
+        font-size: 24px
+
+    .quickview-brand
+        display: none
+
+    .btn-cart
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+        padding: 0 20px
+        height: 50px
+        border-radius: 50px
+        background: #3DD010
+        box-shadow: none
+        text-transform: uppercase
+        font-weight: semibold
+        font-size: 14px
+        line-height: 1
+
+        span
+            display: none
+
+        &:before
+            margin-right: 5px
+            content: url(cart)
+
+        &:after
+            content: 'Adicionar no carrinho'
+
+    .price-box
+        .regular-price
+            .price span
+                font-size: 36px
+
+    .price-box-parcelado
+        display: flex
+        align-items: center
+        font-weight: regular
+        font-size: 14px
+
+        .ico
+            margin-right: 10px
+            width: 16px
+            height: 11px
+            color: color2_bg
+
+        .preco-parcelado-sem-juros
+            margin: 0
+
+            .de span
+                color: #242424
+                font-weight: regular
+                font-size: 14px
+
+            .num span, .value span
+                color: #242424
+                font-weight: bold
+                font-size: 14px
+
+        > span
+            margin-left: 3px
+            color: #242424
+            line-height: 1
+
+            a
+                padding-left: 3px
+                color: #242424
+                text-decoration: underline
