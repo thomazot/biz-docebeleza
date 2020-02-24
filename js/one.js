@@ -860,6 +860,13 @@ function default_categories_carrossel() {
             afterInit: function() {
                 menu.addClass('loaded')
             },
+            items: 12,
+            itemsCustom: [
+                [0, 4],
+                [568, 8],
+                [768, 10],
+                [1024, 12],
+            ],
         })
     }
 }
@@ -994,6 +1001,13 @@ function default_carrossel_brands() {
                 navigation: true,
                 navigationText: ['?', '?'],
                 pagination: false,
+                items: 5,
+                itemsCustom: [
+                    [0, 3],
+                    [568, 3],
+                    [768, 4],
+                    [993, 5],
+                ],
             })
         })
     }
@@ -1439,6 +1453,7 @@ Para cada SVG adicionado, adicione um objeto com os parametros:
 function scrollTop() {
     var currentScrolling = 0
     var heightHeader = $j('.header-container').outerHeight()
+    var modalProduct = $j('.prod__buys')
 
     if ($j(window).width() > 992) $j('.header-container').height(heightHeader)
 
@@ -1464,6 +1479,13 @@ function scrollTop() {
         } else {
             body.removeClass('scrolling--up').removeClass('scrolling--down')
         }
+
+        if (modalProduct.length) {
+            var topModal = modalProduct.offset().top
+            if (scrollTop > topModal) {
+                body.addClass('scrolling--modal')
+            } else body.removeClass('scrolling--modal')
+        }
     })
 }
 
@@ -1480,27 +1502,31 @@ $j(document)
             }
         })
 
-        var categoriesShow = $('.categories__show')
+        var categoriesShow = $('.header-container .categories__show')
 
         if (categoriesShow.length) {
-            $('.header').prepend(categoriesShow)
+            if ($('.header .categories__show').length === 0) {
+                $('.header').prepend(categoriesShow)
+            }
         }
 
         mycart($)
 
-        var productsCarousel = $('.products-carousel__list')
+        var productsCarousel = $(
+            '#especialista-em-cabelos .ul--0, #category-list .ul--0'
+        )
 
         if (productsCarousel.length)
             $(productsCarousel).owlCarousel({
-                itemsScaleUp: true,
                 navigation: true,
+                navigationText: ['?', '?'],
                 pagination: false,
                 items: 12,
                 itemsCustom: [
                     [0, 4],
-                    [568, 5],
-                    [768, 8],
-                    [993, 12],
+                    [568, 8],
+                    [768, 10],
+                    [1024, 12],
                 ],
             })
 
@@ -1619,8 +1645,10 @@ $j(document)
             modal('myaccount-modal')
 
             $('.header .myaccount__header a').click(function(event) {
-                event.preventDefault()
-                modal_open('myaccount-modal')
+                if (!$('body').hasClass('user-logged')) {
+                    event.preventDefault()
+                    modal_open('myaccount-modal')
+                }
             })
         }
 

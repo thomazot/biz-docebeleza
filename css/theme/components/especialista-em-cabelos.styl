@@ -1,0 +1,54 @@
+#especialista-em-cabelos, #category-list
+    background: none
+
+    &.categories--justify
+        .ul--0
+            justify-content: space-between
+
+        .li--0
+            min-width: 0
+
+    .a--0
+        display: block
+        padding: 0 10px
+        height: auto
+        color: color1_bg
+        text-align: center
+        text-transform: none
+        white-space: normal
+        font-weight: regular
+        font-size: 14px
+        line-height: 1
+
+        img
+            margin-right: 0
+            margin-bottom: 5px
+            max-height: none
+            width: 75px
+            height: 75px
+            object-fit: contain
+
+        span
+            display: block
+            max-width: 100%
+            word-break: break-all
+
+        &:hover
+            background: none
+
+@media (max-width: 992px)
+    #especialista-em-cabelos
+        margin-top: -16px
+        padding: 20px 0 100px
+        background: #EFEFEF
+        box-shadow: 300px 0 0 #EFEFEF, -300px 0 0 #EFEFEF
+
+        &:before
+            position: static
+            padding-left: 0
+            content: 'Categorias mais acessadas:'
+            font-weight: regular
+            font-size: 18px
+
+        + #banner__home-banner-mosaico
+            margin-top: -110px

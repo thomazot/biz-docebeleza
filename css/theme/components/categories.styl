@@ -39,6 +39,10 @@
             margin-left: 16px
 
 @media (max-width: 992px)
+    .header-container
+        .categories a img, .categories a svg
+            display: none
+
     .categories
         background: #fff
 
@@ -268,6 +272,9 @@
                             box-shadow: none
                             text-decoration: underline
 
-        .scrolling:not(.scrolling--up) &
+        .scrolling:not(.scrolling--up) .header-container &
             margin-top: -43px
             pointer-events: none
+
+    .header-container .categories .a--0 img
+        display: none

@@ -1,0 +1,45 @@
+.modal-product
+    position: fixed
+    bottom: 0
+    left: 0
+    z-index: 100
+    display: flex
+    justify-content: flex-start
+    align-items: center
+    padding: 10px 0
+    width: 100%
+    background: #fff
+    box-shadow: 0 0 10px rgba(0, 0, 0, .1)
+    transition: all .2s ease
+    transform: translateY(100%)
+
+    .scrolling--modal.scrolling--up &
+        transform: translateY(0)
+
+    .qty-wrapper
+        display: none
+
+    .add-to-cart-btn
+        display: flex
+        justify-content: center
+        align-items: center
+        padding: 0
+        padding: 0
+        width: 140px
+        height: 50px
+        border-radius: 50px
+        box-shadow: none
+        font-weight: regular
+        font-size: 18px
+        line-height: 1
+
+        &:before
+            margin-top: 2px
+            margin-right: 5px
+            content: url(cart)
+
+    &__name
+        padding-bottom: 5px
+        color: color1_bg
+        font-weight: regular
+        font-size: 12px

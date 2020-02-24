@@ -216,3 +216,28 @@
         margin-top: 20px
         padding-top: 20px
         border-top: solid 1px #EFEFEF
+
+@media (max-width: 569px)
+    .prod
+        &__prices
+            display: contents
+
+        &__prices-buys
+            display: flex
+            flex: 0 0 auto
+            flex-flow: column nowrap
+            align-items: flex-start
+
+            .price-box, .prod__payment, .prod__freeshipping, .prod__buys
+                order: 1
+                width: 100%
+
+            .prod__gift
+                order: 2
+                width: 100%
+
+        &__buys
+            flex: 0
+
+            .add-to-cart
+                margin-bottom: 0
