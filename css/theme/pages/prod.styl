@@ -241,3 +241,38 @@
 
             .add-to-cart
                 margin-bottom: 0
+
+.prod__head
+    display: flex
+    justify-content: space-between
+
+    div:first-child
+        display: flex
+        flex: 1 1 auto
+        justify-content: flex-start
+        align-items: center
+        min-width: 0
+
+        .brands
+            flex: 0 0 auto
+
+.add-to-links
+    li
+        display: none
+
+        &.link-wishlist
+            display: block
+            margin: 0
+            padding: 0
+
+            &:before, &:after
+                display: none
+
+            a
+                box-shadow: none
+
+                .ico
+                    color: color1_bg
+
+                &:before, &:after, span
+                    display: none

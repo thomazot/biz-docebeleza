@@ -1382,6 +1382,10 @@ $j.fn.neonTheme.custom = {
             selector: '.owl-prev',
             mode: 'html',
         },
+        'z-wishlist': {
+            selector: '.add-to-links li.link-wishlist a',
+            mode: 'html',
+        },
     },
 }
 
@@ -1455,7 +1459,7 @@ function scrollTop() {
     var heightHeader = $j('.header-container').outerHeight()
     var modalProduct = $j('.prod__buys')
 
-    if ($j(window).width() > 992) $j('.header-container').height(heightHeader)
+    // if ($j(window).width() > 992) $j('.header-container').height(heightHeader)
 
     $j(window).scroll(function() {
         var body = $j('body')
@@ -1521,12 +1525,12 @@ $j(document)
                 navigation: true,
                 navigationText: ['?', '?'],
                 pagination: false,
-                items: 12,
+                items: 11,
                 itemsCustom: [
                     [0, 4],
                     [568, 8],
                     [768, 10],
-                    [1024, 12],
+                    [1024, 11],
                 ],
             })
 

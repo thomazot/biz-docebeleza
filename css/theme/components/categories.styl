@@ -2,6 +2,11 @@
     .header-container > &__show
         display: none
 
+    .header-container &
+        .a--1, .a--2
+            img, svg
+                display: none
+
     &__show
         background: none
         color: color1_bg
@@ -39,10 +44,6 @@
             margin-left: 16px
 
 @media (max-width: 992px)
-    .header-container
-        .categories a img, .categories a svg
-            display: none
-
     .categories
         background: #fff
 
@@ -56,6 +57,11 @@
             content: 'Categorias'
             font-weight: regular
             font-size: 18px
+
+        .header-container &
+            .all-a--0, .all-a--1
+                img, svg
+                    display: none
 
         &__hide
             position: absolute
