@@ -1,0 +1,46 @@
+.shopbybrand-index-brandpageview
+    .brand_container
+        display: none
+
+    @media (min-width: 993px)
+        .col-main, .category-view
+            display: contents
+
+        .main
+            position: static
+            display: grid
+            grid-template-areas: 'category category' 'filters toolbar' 'main main' 'description description'
+            grid-template-columns: 2fr 170px
+
+        .category-block-mode
+            grid-area: category
+
+        .category-description
+            grid-area: description
+
+        .col-left
+            margin: 0
+            padding: 0
+            max-width: none
+            grid-area: filters
+
+        .toolbar
+            align-items: start
+            grid-area: toolbar
+
+        .category__products
+            grid-area: main
+
+        .toolbar-bottom
+            display: none
+
+    @media (max-width: 992px)
+        .col-main, .category-view
+            display: flex
+            flex-flow: column nowrap
+
+            .toolbar
+                order: -3
+
+            .category__products
+                order: -2
