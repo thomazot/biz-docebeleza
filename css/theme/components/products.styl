@@ -10,6 +10,7 @@
         top: 0
         left: 0
         display: inline-block
+        display: none !important
         margin-top: 20px
         padding: 5px 10px
         width: 100%
@@ -123,30 +124,15 @@
 
 @media (max-width: 568px)
     .catalog-category-view, .catalogsearch-result-index, .shopbybrand-index-brandpageview
-        .products
-            &__case
-                display: flex
-                align-items: center
+        &__labels
+            order: -1
 
-            &__header
-                flex: 0 0 90px
-                margin-right: 15px
+        &__prices, a
+            flex: 0 0 100%
 
-                img
-                    height: auto
+        &__item
+            padding: 0
 
-            &__main
-                display: flex
-                flex-flow: row wrap
-
-                .product-rate
-                    order: -2
-
-            &__labels
-                order: -1
-
-            &__prices, a
-                flex: 0 0 100%
-
-            &__item
-                padding: 0
+        .products__item
+            flex: 1 1 140px
+            padding: 5px

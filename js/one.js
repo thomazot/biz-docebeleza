@@ -999,7 +999,10 @@ function default_carrossel_brands() {
             $j(el).owlCarousel({
                 itemsScaleUp: true,
                 navigation: true,
-                navigationText: ['?', '?'],
+                navigationText: [
+                    '<svg class="ico z-prev"><use xlink:href="#z-prev" /></svg>',
+                    '<svg class="ico z-next"><use xlink:href="#z-next" /></svg>',
+                ],
                 pagination: false,
                 items: 5,
                 itemsCustom: [
@@ -1516,9 +1519,7 @@ $j(document)
 
         mycart($)
 
-        var productsCarousel = $(
-            '#especialista-em-cabelos .ul--0, #category-list .ul--0'
-        )
+        var productsCarousel = $('#especialista-em-cabelos .ul--0')
 
         if (productsCarousel.length)
             $(productsCarousel).owlCarousel({
@@ -1548,18 +1549,26 @@ $j(document)
                     [768, 5],
                 ],
             })
-        $(
-            '#banner__home-banner-vitrine-main-1, #banner__home-banner-vitrine-main-2'
-        ).each(function() {
-            $('img', this).each(function() {
-                var src = $(this).attr('src')
-                $(this)
-                    .closest('a')
-                    .css({
-                        'background-image': 'url("' + src + '")',
-                    })
+
+        var productsCarousel = $('.products-carousel')
+        if (productsCarousel.length) {
+            var categories = $('.catalog-category-view .wrapper > .categories')
+            productsCarousel.html('')
+            productsCarousel.append(categories)
+            $('#category-list .ul--0').owlCarousel({
+                navigation: true,
+                navigationText: ['?', '?'],
+                pagination: false,
+                items: 11,
+                itemsCustom: [
+                    [0, 4],
+                    [568, 8],
+                    [768, 10],
+                    [1024, 11],
+                ],
             })
-        })
+        }
+
         var history = $('.wrapper > .products .products__list')
         if (history)
             $(history).owlCarousel({
@@ -1673,7 +1682,7 @@ $j(document)
         // Safe window.scroll
         // Dispara apÃ³s o Ãºltimo movimento de scroll parar no navegador.
     })
-    .on('ajaxComplete', function(resp) {
+    .on('ajaxComplete', function(res) {
         // Safe ajax completed
         // Dispara apÃ³s completar com sucesso qualquer requisiÃ§Ã£o Ajax, e trÃ¡s a resposta do Ajax.
     })

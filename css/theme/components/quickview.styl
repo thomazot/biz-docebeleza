@@ -2,7 +2,13 @@
     .thumb-images
         display: none
 
+    img
+        max-width: 100%
+        max-height: 100%
+        object-fit: contain
+
 .quickview-close
+    position: fixed
     top: 10px
     right: 10px
     bottom: auto
@@ -46,15 +52,29 @@
             content: 'Adicionar no carrinho'
 
     .price-box
-        .regular-price
+        margin-bottom: 0
+
+        .regular-price, .special-price
             .price span
                 font-size: 36px
+
+    .price-box-avista
+        display: none
 
     .price-box-parcelado
         display: flex
         align-items: center
+        margin-top: 10px
+        padding-left: 3px
         font-weight: regular
         font-size: 14px
+
+        &:before
+            margin-right: 3px
+            width: 15px
+            height: 12px
+            background: url(card) no-repeat center center
+            content: ''
 
         .ico
             margin-right: 10px
@@ -84,3 +104,31 @@
                 padding-left: 3px
                 color: #242424
                 text-decoration: underline
+
+.quickview-outerbox
+    overflow: auto
+    height: 100%
+
+.quick-view-essential
+    overflow: auto
+    max-height: 100%
+
+@media (min-width: 993px)
+    .quick-view-shop
+        .no-scroll
+            position: relative
+
+            > *
+                padding-right: 200px
+
+            > .btn-cart
+                position: absolute
+                right: 0
+                bottom: 20px
+                padding-right: 0
+                padding-left: 0
+                width: 220px
+
+@media (max-width: 992px)
+    .quick-view-essential
+        display: block

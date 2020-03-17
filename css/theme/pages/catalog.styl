@@ -72,7 +72,7 @@
         .main
             position: static
             display: grid
-            grid-template-areas: 'category category' 'filters toolbar' 'main main' 'description description'
+            grid-template-areas: 'category category' 'filters toolbar' 'main main' 'pagination pagination' 'description description'
             grid-template-columns: 2fr 170px
 
         .category-block-mode
@@ -95,7 +95,7 @@
             grid-area: main
 
         .toolbar-bottom
-            display: none
+            grid-area: pagination
 
     @media (max-width: 992px)
         .col-main
@@ -107,3 +107,52 @@
 
             .category__products
                 order: -2
+
+        .category-block-mode
+            order: -4
+
+            .category-custom
+                max-width: 100%
+                width: auto
+
+.catalogsearch-result-index
+    @media (min-width: 993px)
+        .main
+            position: static
+            display: grid
+            grid-template-areas: 'category category' 'filters toolbar' 'main main' 'pagination pagination' 'description description'
+            grid-template-columns: 2fr 170px
+
+        .search-title
+            text-align: center
+            grid-area: category
+
+            h1
+                color: #242424
+                font-weight: regular
+                font-style: italic
+                font-size: 22px
+
+                small
+                    margin-right: 0
+                    color: #242424
+                    font-style: normal
+                    font-size: 22px
+
+        .category-block-mode
+            grid-area: category
+
+        .category-description
+            grid-area: description
+
+        .col-left
+            grid-area: filters
+
+        .toolbar
+            grid-area: toolbar
+
+        .category__products
+            grid-area: main
+
+        .toolbar-bottom
+            grid-area: pagination
