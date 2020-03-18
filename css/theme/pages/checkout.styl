@@ -1,6 +1,10 @@
 .opc-registered-users button, .opc .buttons-set button:not(.btn--outline)
     border-radius: 45px
+    background: color2_bg
     text-transform: uppercase
+
+    &:hover
+        background: color2_bg
 
 .opc
     input[type=text], input[type=password], input[type=search], input[type=email], input[type=url], input[type=tel], input[type=number], input[type=date], input[type=mounth], input[type=week], input[type=time], input[type=datetime], input[type=datetime-local], input[type=color]
@@ -8,11 +12,37 @@
         border-radius: 45px
         box-shadow: none
 
-.osc-onepage .section
-    box-shadow: 0 0 0 1px #343434
+.osc-onepage
+    .section
+        opacity: .5
 
-.step-title h2
-    color: #343434
+        &.active
+            opacity: 1
+
+    .btn--outline
+        border-radius: 45px
+        background: #00A6D7
+        box-shadow: none
+        color: #fff
+        text-transform: uppercase
+        font-size: 12px
+
+        &:hover
+            background: #00A6D7
+            color: #fff
+
+.step-title
+    margin: -16px -16px 0
+    padding: 16px
+    width: auto
+    height: 50px
+    background: #343434
+
+    .number
+        display: none
+
+    h2
+        color: #fff
 
 .step-title .number, .allow.active .step-title .number
     background: #343434

@@ -1,11 +1,47 @@
 
 .cart
-    &__links .btn-checkout
-        padding: 0 30px
-        height: 45px
-        border-radius: 45px
-        font-weight: medium
-        font-size: 18px
+    &__boxes
+        .input-text
+            border-radius: 45px
+
+        button
+            margin-left: 10px
+            padding: 0 30px
+            height: 45px
+            border-radius: 45px
+            background: #00A6D7
+            box-shadow: none
+            color: #fff
+            font-weight: medium
+            font-size: 18px
+
+            &:hover
+                background: #00A6D7
+
+    &__links
+        .btn-checkout
+            padding: 0 30px
+            height: 45px
+            border-radius: 45px
+            box-shadow: none
+            font-weight: medium
+            font-size: 18px
+
+            &:hover
+                background: #3dd010
+
+        .btn-continue
+            padding: 0 30px
+            height: 45px
+            border-radius: 45px
+            background: #50D6FD
+            box-shadow: none
+            color: #fff
+            font-weight: medium
+            font-size: 18px
+
+            &:hover
+                background: #50D6FD
 
     &-table .btn-empty
         height: 45px
@@ -22,6 +58,7 @@
         height: 45px
         border-radius: 45px
         background: #3dd010
+        box-shadow: none
         font-weight: medium
         font-size: 18px
 
@@ -32,3 +69,12 @@
         display: flex
         justify-content: space-between
         align-items: center
+
+@media (max-width: 500px)
+    .cart__links
+        position: fixed
+        bottom: 0
+        left: 0
+        padding: 20px
+        width: 100%
+        background: #fff

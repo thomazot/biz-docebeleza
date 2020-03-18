@@ -1,0 +1,54 @@
+.fixed-menu
+    position: fixed
+    bottom: 0
+    left: 0
+    z-index: 100
+    visibility: hidden
+    width: 100%
+    background: color1_bg
+    opacity: 0
+    transition: all .2s ease
+    transform: translateY(10px)
+
+    &__container
+        display: flex
+        justify-content: space-between
+        align-items: center
+        margin: 0 auto
+        max-width: calc(100% - 32px)
+        width: viewport
+
+    .ico
+        width: 30px
+        height: 30px
+
+    &__cart
+        position: relative
+
+        .z-cart
+            color: #3dd010
+
+        span
+            position: absolute
+            bottom: 18px
+            left: 50%
+            display: flex
+            justify-content: center
+            align-items: center
+            width: .88rem
+            height: .88rem
+            border-radius: 50%
+            background: #268800
+            color: #fff
+            font-weight: 400
+            font-size: .63rem
+            transform: translateX(-50%)
+
+    @media (max-width: 500px)
+        .scrolling &
+            visibility: visible
+            opacity: 1
+            transform: translateY(0)
+
+        .catalog-product-view &
+            display: none

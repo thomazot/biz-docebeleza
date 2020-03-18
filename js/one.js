@@ -1673,6 +1673,25 @@ $j(document)
                 1000
             )
         })
+
+        var fixedCart = $('.fixed-menu__cart span')
+        if (fixedCart.length) {
+            fixedCart.html($('.header .mycart__header .qtd').text())
+        }
+
+        $('.fixed-menu__nav').click(function() {
+            $('.categories__show').trigger('click')
+        })
+        $('.fixed-menu__cart').click(function() {
+            $('.mycart__header a').trigger('click')
+        })
+
+        $('.fixed-menu__wishlist').click(function() {
+            window.location.href = '/wishlist'
+        })
+        $('.fixed-menu__user').click(function() {
+            $('.myaccount__header a:first-child').trigger('click')
+        })
     })
     .on('resizeStop', function(e) {
         // Safe window.resize

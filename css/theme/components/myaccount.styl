@@ -3,7 +3,7 @@
         display: none
 
     &__header
-        a
+        > a, > span
             display: flex
             color: gray
             text-decoration: underline
@@ -16,6 +16,10 @@
                 width: 24px
                 height: 24px
                 color: color2_bg
+
+        > span
+            a:last-child
+                display: block
 
     &:hover .myaccount__header a
         background: none
@@ -76,11 +80,13 @@
     .modal__content
         padding-top: 30px
         padding-bottom: 30px
-        max-width: 100%
-        width: 800px
 
         > .title
             color: #15B0DE
             text-align: center
             font-weight: regular
             font-size: 16px
+
+        @media (min-width: 993px)
+            max-width: 100%
+            width: 800px
