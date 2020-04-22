@@ -11060,6 +11060,9 @@ body {
 .wrapper-container {
   overflow: visible;
 }
+.wrapper {
+  position: relative;
+}
 .js-stickybit-parent {
   padding-top: 8.75rem;
 }
@@ -11684,7 +11687,23 @@ button .ico {
   }
 }
 
+.filters__open {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0.63rem;
+  padding: 0;
+  max-width: 100%;
+  width: 12.5rem;
+  height: 2.38rem;
+  border-radius: 38px;
+  font-weight: 400;
+  font-size: 0.88rem;
+}
 @media (max-width: 992px) {
+  .filters:not(.on) > .title {
+    display: none;
+  }
   .filters .link {
     color: #fff;
   }
@@ -11702,7 +11721,8 @@ button .ico {
     padding: 1.25rem 0 0;
     width: 100%;
   }
-  .filters > .title {
+  .filters > .title,
+  .filters__open {
     display: none;
   }
   .filters__list {
@@ -11854,7 +11874,8 @@ button .ico {
 }
 
 .fixed-menu {
-  position: fixed;
+  position: -webkit-sticky;
+  position: sticky;
   bottom: 0;
   left: 0;
   z-index: 100;
@@ -11905,7 +11926,9 @@ button .ico {
     opacity: 1;
     transform: translateY(0);
   }
-  .catalog-product-view .fixed-menu {
+  .catalog-product-view .fixed-menu,
+  .opc .fixed-menu,
+  .checkout-cart-index .fixed-menu {
     display: none;
   }
 }
@@ -12247,6 +12270,7 @@ button .ico {
   left: 0;
   z-index: 100;
   display: flex;
+  visibility: hidden;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
@@ -12255,9 +12279,6 @@ button .ico {
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
   transition: all 0.2s ease;
   transform: translateY(100%);
-}
-.scrolling--modal .modal-product {
-  transform: translateY(0);
 }
 .modal-product .qty-wrapper {
   display: none;
@@ -12289,6 +12310,12 @@ button .ico {
   color: @bg(1);
   font-weight: 400;
   font-size: 0.75rem;
+}
+@media (max-width: 992px) {
+  .scrolling--modal .modal-product {
+    visibility: visible;
+    transform: translateY(0);
+  }
 }
 
 .modal {
@@ -13725,9 +13752,11 @@ input[type=search].search__input {
     position: fixed;
     bottom: 0;
     left: 0;
+    z-index: 100;
     padding: 1.25rem;
     width: 100%;
     background: #fff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
   }
 }
 
@@ -14164,11 +14193,15 @@ input[type=search].search__input {
   }
 }
 
+.opc .head__contact {
+  display: none;
+}
 .opc .wrapper {
   padding: 0;
 }
 .opc .header {
   justify-content: space-between;
+  padding: 0.63rem 0;
 }
 .opc .header-container {
   margin: 0 0 1.25rem;

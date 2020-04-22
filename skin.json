@@ -1,6 +1,6 @@
 {
-    "protocol": "http",
-    "host": "docebeleza.loja.biz",
+    "protocol": "https",
+    "host": "www.docebeleza.com.br",
     "browsers": [">1%"],
     "pxtorem": {
         "rootValue": 16,
